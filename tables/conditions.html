@@ -123,14 +123,22 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td><span id="source">source</span></td>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="source">source</span></td>
 				 <td>text</td>
 				 <td>2147483647</td>
-				 <td title='nullable'>√</td>
+				 <td title=''></td>
 				 <td title=''></td>
 				 <td>null</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
+				   <tr>
+					<td title="combination.source references conditions.source via uniquesourceconstraint">
+						<a href='combination.html'>combination</a><span class='relatedKey'>.source</span>
+					</td>
+					<td class="constraint detail">
+						uniquesourceconstraint <span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span>
+					</td>
+				   </tr>
 				  </table>				 
 				 </td>
 				 <td>
@@ -377,10 +385,22 @@
 				  <td><span title='Ascending'>Asc</span></td>
 				  <td>id</td>
 				 </tr>				 
+				 <tr>
+				  <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> uniquesource</td>
+				  <td>Must be unique</td>
+				  <td><span title='Ascending'>Asc</span></td>
+				  <td>source</td>
+				 </tr>				 
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
 		</div>
+		<div class="alert alert-warning alert-dismissible">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+			<h4><i class="icon fa fa-warning"></i> Graphviz Needed!</h4>
+			<p>SchemaSpy was unable to generate a diagram of table relationships.</br>
+			SchemaSpy requires Graphviz graphvizVersion 2.26 or versions greater than 2.31 from <a href='http://www.graphviz.org' target='_blank'>www.graphviz.org</a>.</p>
+	    </div>                   	
 	      </section>
     
   </div>
