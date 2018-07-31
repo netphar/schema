@@ -103,31 +103,9 @@
 				<tr>
 				 <td>combination</td>
 				 <td>Table</td>
-				 <td>dss</td>
-				 <td>float8</td>
-				 <td>17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td>readout</td>
-				 <td>text</td>
-				 <td>2147483647</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td>controlnegative</td>
-				 <td>bool</td>
-				 <td>1</td>
+				 <td>druga</td>
+				 <td>varchar</td>
+				 <td>256</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -136,9 +114,53 @@
 				<tr>
 				 <td>doses</td>
 				 <td>Table</td>
-				 <td>dosea</td>
-				 <td>float8</td>
-				 <td>17</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>id</td>
+				 <td>serial</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title='Automatically updated by the database'>√</td>
+				 <td>nextval(&#39;doses_id_seq&#39;::regclass)</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>dosescombination</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>cells</td>
+				 <td>Table</td>
+				 <td>accession_id</td>
+				 <td>varchar</td>
+				 <td>510</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>NULL::character varying</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>combination</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>combination</td>
+				 <td>Table</td>
+				 <td>drugb</td>
+				 <td>varchar</td>
+				 <td>256</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -156,22 +178,11 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>conditions</td>
+				 <td>doses</td>
 				 <td>Table</td>
-				 <td>volumeperwell</td>
-				 <td>int4</td>
-				 <td>10</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td>cellsperwell</td>
-				 <td>int8</td>
-				 <td>19</td>
+				 <td>cellline</td>
+				 <td>varchar</td>
+				 <td>256</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -180,7 +191,62 @@
 				<tr>
 				 <td>doses</td>
 				 <td>Table</td>
-				 <td>dss</td>
+				 <td>dosea</td>
+				 <td>float8</td>
+				 <td>17</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>doses</td>
+				 <td>Table</td>
+				 <td>synergy_bliss</td>
+				 <td>float8</td>
+				 <td>17</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>combination</td>
+				 <td>Table</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>source</td>
+				 <td>varchar</td>
+				 <td>1024</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>doses</td>
+				 <td>Table</td>
+				 <td>response</td>
+				 <td>float8</td>
+				 <td>17</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>drugs</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>drug_id</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>doses</td>
+				 <td>Table</td>
+				 <td>doseb</td>
 				 <td>float8</td>
 				 <td>17</td>
 				 <td title='nullable'>√</td>
@@ -202,9 +268,9 @@
 				<tr>
 				 <td>doses</td>
 				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>blockis</td>
-				 <td>int4</td>
-				 <td>10</td>
+				 <td>dss</td>
+				 <td>float8</td>
+				 <td>17</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -222,6 +288,39 @@
 				 <td></td>
 				</tr>
 				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>cellsperwell</td>
+				 <td>int8</td>
+				 <td>19</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>cells</td>
+				 <td>Table</td>
+				 <td>tissue_id</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>doses</td>
+				 <td>Table</td>
+				 <td>druga</td>
+				 <td>varchar</td>
+				 <td>256</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
 				 <td>doses</td>
 				 <td>Table</td>
 				 <td>drugb</td>
@@ -233,39 +332,6 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>doses</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>id</td>
-				 <td>serial</td>
-				 <td>10</td>
-				 <td title=''></td>
-				 <td title='Automatically updated by the database'>√</td>
-				 <td>nextval(&#39;doses_id_seq&#39;::regclass)</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>doses</td>
-				 <td>Table</td>
-				 <td>response</td>
-				 <td>float8</td>
-				 <td>17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>doses</td>
-				 <td>Table</td>
-				 <td>synergy_bliss</td>
-				 <td>float8</td>
-				 <td>17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
 				 <td>combination</td>
 				 <td>Table</td>
 				 <td>synergy_bliss</td>
@@ -277,80 +343,14 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td>format</td>
-				 <td>int4</td>
-				 <td>10</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>combination</td>
-				 <td>Table</td>
-				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i>blockis</td>
-				 <td>int4</td>
-				 <td>10</td>
-				 <td title=''></td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td>combination</td>
-				 <td>int4</td>
-				 <td>10</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
 				 <td>doses</td>
 				 <td>Table</td>
-				 <td>cellline</td>
-				 <td>varchar</td>
-				 <td>256</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td>controlpositive</td>
-				 <td>bool</td>
-				 <td>1</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>doses</td>
-				 <td>Table</td>
-				 <td>doseb</td>
-				 <td>float8</td>
-				 <td>17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>id</td>
-				 <td>serial</td>
+				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>blockis</td>
+				 <td>int4</td>
 				 <td>10</td>
+				 <td title='nullable'>√</td>
 				 <td title=''></td>
-				 <td title='Automatically updated by the database'>√</td>
-				 <td>nextval(&#39;conditions_id_seq&#39;::regclass)</td>
+				 <td>null</td>
 				 <td></td>
 				</tr>
 				<tr>
@@ -359,50 +359,6 @@
 				 <td>unit</td>
 				 <td>text</td>
 				 <td>2147483647</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td>single</td>
-				 <td>int4</td>
-				 <td>10</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>combination</td>
-				 <td>Table</td>
-				 <td>druga</td>
-				 <td>varchar</td>
-				 <td>256</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>conditions</td>
-				 <td>Table</td>
-				 <td>dosescombination</td>
-				 <td>int4</td>
-				 <td>10</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>combination</td>
-				 <td>Table</td>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>source</td>
-				 <td>varchar</td>
-				 <td>1024</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -420,33 +376,143 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td>doses</td>
-				 <td>Table</td>
-				 <td>druga</td>
-				 <td>varchar</td>
-				 <td>256</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td>combination</td>
-				 <td>Table</td>
-				 <td>drugb</td>
-				 <td>varchar</td>
-				 <td>256</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td></td>
-				</tr>
-				<tr>
 				 <td>combination</td>
 				 <td>Table</td>
 				 <td>cellline</td>
 				 <td>varchar</td>
 				 <td>256</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>controlnegative</td>
+				 <td>bool</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>cells</td>
+				 <td>Table</td>
+				 <td>cell_name</td>
+				 <td>text</td>
+				 <td>2147483647</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>volumeperwell</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>combination</td>
+				 <td>Table</td>
+				 <td>dss</td>
+				 <td>float8</td>
+				 <td>17</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>single</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>drugs</td>
+				 <td>Table</td>
+				 <td>drug_name</td>
+				 <td>text</td>
+				 <td>2147483647</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>cells</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>cell_id</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i>id</td>
+				 <td>serial</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title='Automatically updated by the database'>√</td>
+				 <td>nextval(&#39;conditions_id_seq&#39;::regclass)</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>combination</td>
+				 <td>Table</td>
+				 <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i>blockis</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title=''></td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>controlpositive</td>
+				 <td>bool</td>
+				 <td>1</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>format</td>
+				 <td>int4</td>
+				 <td>10</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>null</td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td>conditions</td>
+				 <td>Table</td>
+				 <td>readout</td>
+				 <td>text</td>
+				 <td>2147483647</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>

@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <database name="drugcomb" schema="public" type="PostgreSQL - 9.2.23">
    <tables>
+      <table name="cells" numRows="1691" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="cell_id" nullable="false" remarks="" size="10" type="int4"/>
+         <column autoUpdated="false" defaultValue="NULL::character varying" digits="0" id="1" name="accession_id" nullable="true" remarks="" size="510" type="varchar"/>
+         <column autoUpdated="false" digits="0" id="2" name="cell_name" nullable="true" remarks="" size="2147483647" type="text"/>
+         <column autoUpdated="false" digits="0" id="3" name="tissue_id" nullable="true" remarks="" size="10" type="int4"/>
+         <primaryKey column="cell_id" sequenceNumberInPK="1"/>
+         <index name="cells_pkey" unique="true">
+            <column ascending="true" name="cell_id"/>
+         </index>
+      </table>
       <table name="combination" numRows="22504" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('combination_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial"/>
          <column autoUpdated="false" digits="0" id="1" name="druga" nullable="true" remarks="" size="256" type="varchar"/>
@@ -63,6 +73,14 @@
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="doses_pkey" unique="true">
             <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="drugs" numRows="759" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="false" digits="0" id="0" name="drug_id" nullable="false" remarks="" size="10" type="int4"/>
+         <column autoUpdated="false" digits="0" id="1" name="drug_name" nullable="true" remarks="" size="2147483647" type="text"/>
+         <primaryKey column="drug_id" sequenceNumberInPK="1"/>
+         <index name="drugs_pkey" unique="true">
+            <column ascending="true" name="drug_id"/>
          </index>
       </table>
    </tables>

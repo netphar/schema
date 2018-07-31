@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>doses - drugcomb Database</title>
+  <title>cells - drugcomb Database</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -75,7 +75,7 @@
   <div class="content-wrapper">
           <!-- Content Header (Page header) -->
       <section class="content-header">
-        <h1>doses</h1></br>
+        <h1>cells</h1></br>
 		      </section>
       <!-- Main content -->
       <section class="content">
@@ -106,12 +106,12 @@
 				</thead>
 				<tbody>
 				<tr>
-				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
-				 <td>serial</td>
+				 <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="cell_id">cell_id</span></td>
+				 <td>int4</td>
 				 <td>10</td>
 				 <td title=''></td>
-				 <td title='Automatically updated by the database'>√</td>
-				 <td>nextval(&#39;doses_id_seq&#39;::regclass)</td>
+				 <td title=''></td>
+				 <td>null</td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
 				  </table>				 
@@ -123,9 +123,26 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td><span id="druga">druga</span></td>
+				 <td><span id="accession_id">accession_id</span></td>
 				 <td>varchar</td>
-				 <td>256</td>
+				 <td>510</td>
+				 <td title='nullable'>√</td>
+				 <td title=''></td>
+				 <td>NULL::character varying</td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>				 
+				 </td>
+				 <td>
+				  <table border='0' cellspacing='0' cellpadding='0'>
+				  </table>					 
+				 </td>
+				 <td></td>
+				</tr>
+				<tr>
+				 <td><span id="cell_name">cell_name</span></td>
+				 <td>text</td>
+				 <td>2147483647</td>
 				 <td title='nullable'>√</td>
 				 <td title=''></td>
 				 <td>null</td>
@@ -140,126 +157,7 @@
 				 <td></td>
 				</tr>
 				<tr>
-				 <td><span id="drugb">drugb</span></td>
-				 <td>varchar</td>
-				 <td>256</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td><span id="dosea">dosea</span></td>
-				 <td>float8</td>
-				 <td>17,17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td><span id="doseb">doseb</span></td>
-				 <td>float8</td>
-				 <td>17,17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td><span id="response">response</span></td>
-				 <td>float8</td>
-				 <td>17,17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td><span id="dss">dss</span></td>
-				 <td>float8</td>
-				 <td>17,17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td><span id="synergy_bliss">synergy_bliss</span></td>
-				 <td>float8</td>
-				 <td>17,17</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td><span id="cellline">cellline</span></td>
-				 <td>varchar</td>
-				 <td>256</td>
-				 <td title='nullable'>√</td>
-				 <td title=''></td>
-				 <td>null</td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>				 
-				 </td>
-				 <td>
-				  <table border='0' cellspacing='0' cellpadding='0'>
-				  </table>					 
-				 </td>
-				 <td></td>
-				</tr>
-				<tr>
-				 <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="blockis">blockis</span></td>
+				 <td><span id="tissue_id">tissue_id</span></td>
 				 <td>int4</td>
 				 <td>10</td>
 				 <td title='nullable'>√</td>
@@ -271,21 +169,13 @@
 				 </td>
 				 <td>
 				  <table border='0' cellspacing='0' cellpadding='0'>
-				   <tr>
-					<td title="doses.blockis references combination.blockis via doses_blockis_fkey">
-						<a href='combination.html'>combination</a><span class='relatedKey'>.blockis</span>
-					</td>
-					<td class="constraint detail">
-						doses_blockis_fkey <span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span>
-					</td>
-				   </tr>
 				  </table>					 
 				 </td>
 				 <td></td>
 				</tr>
 								</tbody>
 				</table>
-				<p title='10 columns'>Table contained <span id="recordNumber">562600</span> rows<p/>
+				<p title='4 columns'>Table contained <span id="recordNumber">1691</span> rows<p/>
 			</div>
 		</div>
 		<div class="box box-primary">		
@@ -312,21 +202,15 @@
 				</thead>
 				<tbody>
 				 <tr>
-				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> doses_pkey</td>
+				  <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> cells_pkey</td>
 				  <td>Primary key</td>
 				  <td><span title='Ascending'>Asc</span></td>
-				  <td>id</td>
+				  <td>cell_id</td>
 				 </tr>				 
 				</tbody>
 				</table>   			  
 			</div><!-- /.box-body -->
 		</div>
-		<div class="alert alert-warning alert-dismissible">
-			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-			<h4><i class="icon fa fa-warning"></i> Graphviz Needed!</h4>
-			<p>SchemaSpy was unable to generate a diagram of table relationships.</br>
-			SchemaSpy requires Graphviz graphvizVersion 2.26 or versions greater than 2.31 from <a href='http://www.graphviz.org' target='_blank'>www.graphviz.org</a>.</p>
-	    </div>                   	
 	      </section>
     
   </div>
